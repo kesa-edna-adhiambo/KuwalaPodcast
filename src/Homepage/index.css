@@ -1,0 +1,86 @@
+.navbar {
+    display: flex;
+    gap: 40px;
+    padding-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 150px;
+    font-size: 23px;
+    font-variant: inherit;
+    margin-left: 7%;
+    position: relative; 
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex;
+    list-style-type: none;
+    gap: 7rem;
+}
+
+.navbar-content li {
+    cursor: pointer; 
+    color: #0c0615;
+    font-size: larger;
+    transition: color 0.3s;
+    padding: 10px;
+}
+
+.navbar-content li:hover {
+    color: rgb(126, 55, 7); 
+    transform: scale(1.1);
+
+}
+
+.episodes-section, .portfolio-section, .article-section, .contact-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.landing-page {
+    position: relative; 
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://t3.ftcdn.net/jpg/05/62/86/42/360_F_562864226_coTvxkAPZDSaVdaBEaBTrSWfBPs1vquC.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: 1;
+}
+
+.content {
+    position: relative; 
+    z-index: 2;
+    margin-top: 40px;
+}
+
+h2{
+    margin-top: 250px;
+    font-size: 50px;
+    color:rgb(48, 20, 1)
+
+}
+
+p{
+
+   font-size: 25px;
+    color:rgb(8, 1, 1);
+    margin-top: 50px;
+}
+
+h1.active {
+    text-decoration: underline;
+    color: rgb(48, 20, 1);
+}
