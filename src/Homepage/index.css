@@ -1,15 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.whole {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     display: flex;
     gap: 40px;
-    padding-top: 0px;
+    padding: 20px 150px;
     justify-content: space-between;
     align-items: center;
-    padding-right: 150px;
-    font-size: 23px;
-    font-variant: inherit;
+    font-size: 20px;
     margin-left: 7%;
     position: relative; 
     z-index: 1000;
+    background-color: white; /* Add a background for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    width: 70px;
+    height: 60px;
 }
 
 .navbar-content {
@@ -29,21 +50,16 @@
 .navbar-content li:hover {
     color: rgb(126, 55, 7); 
     transform: scale(1.1);
-
 }
 
-.episodes-section, .portfolio-section, .article-section, .contact-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 .landing-page {
     position: relative; 
     height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    text-align: center;
+    color: white;
 }
 
 .landing-page::before {
@@ -60,27 +76,149 @@
     z-index: 1;
 }
 
-.content {
-    position: relative; 
-    z-index: 2;
-    margin-top: 40px;
+.landing-page h2 {
+    z-index: 2; /* Ensure the text appears above the background */
 }
 
-h2{
-    margin-top: 250px;
-    font-size: 50px;
-    color:rgb(48, 20, 1)
-
+button {
+    background-color: rgb(148, 54, 4); 
+    color: white; 
+    width: 200px; 
+    height: 50px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 20px; 
+    margin-top: 15px; /* Add margin for separation */
+    transition: background-color 0.3s;
 }
 
-p{
-
-   font-size: 25px;
-    color:rgb(8, 1, 1);
-    margin-top: 50px;
+button:hover {
+    background-color: rgb(68, 30, 1); 
 }
 
-h1.active {
-    text-decoration: underline;
-    color: rgb(48, 20, 1);
+#blog {
+    display: flex;
+    flex-direction: column; /* Stack blog posts */
+    gap: 20px; /* Adds space between the blog posts */
+    font-size: 20px;
+    padding: 20px;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: rgb(68, 30, 1); 
+}
+
+.Uppercards, .bottomcards {
+    display: flex;
+    flex-direction: column; /* Stack cards in two columns */
+    align-items: center;
+    padding: 20px;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+.cardsText {
+    background-color: white; /* Make card backgrounds white */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.cardsText:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add hover effect */
+}
+
+.cardsText h1 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.cardsText h2 {
+    font-size: 16px;
+    color: #666; /* Slightly muted color for titles */
+}
+
+.interactiveBox {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box-text {
+    color: #333;
+    font-size: 14px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dynamic-text {
+    color: rgb(68, 30, 1);
+    font-size: 18px;
+}
+
+.footer-section {
+    padding: 20px;
+    background-color: rgb(68, 30, 1); 
+    color: white;
+    text-align: center; /* Center text in footer */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+}
+
+.color {
+    display: flex;
+    justify-content: space-between; /* Space out sections */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Max width for improved layout */
+}
+
+.images p {
+    margin: 0 10px; /* Space between icons */
+}
+
+#whatsapp, #calling, #email {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space between contact items */
+}
+
+#whatsapp p, #calling p, #email p {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+
+
+
+
+
+
+
+
+
