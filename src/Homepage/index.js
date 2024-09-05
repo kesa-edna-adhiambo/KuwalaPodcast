@@ -1,5 +1,3 @@
-
-
 import './index.css';
 import React, { useState, useRef, useEffect } from 'react';
 import { FaFacebook } from "react-icons/fa";
@@ -35,11 +33,11 @@ const Podcast = () => {
 function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [expandedPost, setExpandedPost] = useState(null); 
 
   const homeRef = useRef();
   const podcastRef = useRef();
   const videosRef = useRef();
-  const portfolioRef = useRef();
   const teamRef = useRef();
 
   const toggleMenu = () => {
@@ -78,6 +76,10 @@ function Homepage() {
     };
   }, []);
 
+  const togglePost = (postIndex) => {
+    setExpandedPost(expandedPost === postIndex ? null : postIndex); // Toggle post expansion
+  };
+
   return (
     <div>
       <div className='whole'>
@@ -103,15 +105,17 @@ function Homepage() {
         <div ref={homeRef} className='landing-page'>
           <div className='content'>
             <h2>The Laughter Rescue</h2>
-            <p>Dive into the wild world where humor turns struggles into strength! Each episode is packed with hilarious stories and uplifting insights, proving that laughter is really the best medicine. Join us for a fun ride of comedy and inspiration—let’s laugh through life’s twists and turns together!</p>
+            <span>Dive into the wild world where humor turns struggles into strength! Each episode is packed with hilarious stories and uplifting insights, proving that laughter is really the best medicine. Join us for a fun ride of comedy and inspiration—let’s laugh through life’s twists and turns together!</span>
           </div>
         </div>
       </div>
 
+      <div className='sections'>
+
       <div ref={podcastRef} className='podcast-section'>
       </div>
 
-       <div className='title'>
+      <div className='title'>
            <h1 className="title">Podcast</h1>
            <br />
            <p className="dynamic-text">Get Ready for Excitement!</p>
@@ -122,64 +126,98 @@ function Homepage() {
            </div>
        </div>
 
-
        <div ref={videosRef} className='videos-section'>
         <h1 className={activeSection === 'videos' ? 'active' : ''}>Videos</h1>
       </div>
 
-
       <h1>Blog</h1>
-      <div id='blog'>
-        <div>
-          <h2>A Dive into Born A Crime</h2>
-          <p>In the realm  of literature, books often serve as mirrors reflecting society's
-         complexities. One such book that has captivated
-         readers worldwide is “Born a Crime,” penned by Trevor Noah. This memoir
-         offers an intimate glimpse into the life of one of the world's most beloved
-         comedians, but beyond the laughter lies a profound exploration of identity,
-         resilience, and the enduring power of love. As we navigate through a world
-         grappling with social, political, and economic upheavals, “Born a Crime”
-         emerges as a beacon of understanding and empathy, illuminating the paths
-         less traveled and the stories too often overlooked.</p>
-          <button id='view more'>view more</button>
-        </div>
-        <div>
-          <h2>Navigating the Complexities of Identity</h2>
-          <p>
-      Trevor Noah's journey is not just about his rise to fame; it's a narrative woven
-      with threads of racial identity, cultural heritage, and personal struggle. Born
-      to a white Swiss father and a black Xhosa mother during South Africa's apartheid
-      era, Noah's experiences highlight the intricate dance between identity and societal norms.
-      His story serves as a reminder that identity is not a monolith but a tapestry of experiences,
-      histories, and cultures that shape who we are. In today's increasingly globalized world, where 
-      hybrid identities are becoming the norm, Noah's exploration of his own identity resonates
-      deeply, challenging us to reconsider our preconceived notions of race and belonging.
-       </p>
-          <button id='view more'>view more</button>
-        </div>
-        <div>
-          <h2>Resilience in the Face of Adversity</h2>
-          <p>
-      “Born a Crime” is not merely a tale of survival; it's a testament to the human spirit's ability
-       to thrive amidst adversity. Through Noah's eyes, we witness the strength of the human will as he
-       navigates a system designed to break him. His story is a powerful reminder that resilience is not just
-       about bouncing back from hardship; it's about finding joy, humor, and purpose within the chaos.
-       In a world where many face systemic barriers and discrimination, Noah's journey offers hope and
-       inspiration, showing that even in the darkest times, there is room for growth, change, and ultimately, freedom.
-       </p>
-          <button id='view more'>view more</button>
-        </div>
-        <div>
-          <h2>Love as a Catalyst for Change</h2>
-          <p>
-      At the heart of “Born a Crime” is the transformative power of love. Noah's relationship with his mother,
-      Patricia, stands out as a beacon of hope and strength. Despite the odds stacked against them, they found
-      solace and support in each other, embodying the idea that love can transcend boundaries and inspire change.
-      In a time when families are being torn apart by policies and ideologies that seek to divide us, Noah's portrayal
-      of familial bonds offers a counter-narrative, reminding us of the importance of unity, compassion, and mutual understanding.</p>
-          <button id='view more'>view more</button>
-        </div>
-      </div>
+<div id='blog' className="blog-container">
+  <div className="blog-post">
+    <h2>A Dive into Born A Crime</h2>
+    <p>
+      In the realm of literature, books often serve as mirrors reflecting society's complexities. 
+      One such book that has captivated readers worldwide is “Born a Crime,” penned by Trevor Noah. 
+      This memoir offers an intimate glimpse into the life of one of the world's most beloved comedians, 
+      but beyond the laughter lies a profound exploration of identity, resilience, and the enduring power of love...
+    </p>
+    {expandedPost === 0 && (
+      <>
+        <p>
+          As we navigate through a world grappling with social, political, and economic upheavals, 
+          “Born a Crime” emerges as a beacon of understanding and empathy. Noah's experiences highlight the importance 
+          of personal narrative in a global context, exploring the paths less traveled and the stories too often overlooked.
+        </p>
+      </>
+    )}
+    <button onClick={() => togglePost(0)}>{expandedPost === 0 ? 'View Less' : 'View More'}</button>
+  </div>
+  
+  <div className="blog-post">
+    <h2>Navigating the Complexities of Identity</h2>
+    <p>
+      Trevor Noah's journey is not just about his rise to fame; it's a narrative woven with threads of racial identity...
+    </p>
+    {expandedPost === 1 && (
+      <>
+        <p>
+          Born to a white Swiss father and a black Xhosa mother during South Africa's apartheid era, 
+          Noah's experiences highlight the intricate dance between identity and societal norms. 
+          His story serves as a reminder that identity is not a monolith but a tapestry of experiences, histories, 
+          and cultures that shape who we are.
+        </p>
+        <p>
+          In today's increasingly globalized world, where hybrid identities are becoming the norm, 
+          Noah's exploration of his own identity resonates deeply, challenging us to reconsider our preconceived notions 
+          of race and belonging.
+        </p>
+      </>
+    )}
+    <button onClick={() => togglePost(1)}>{expandedPost === 1 ? 'View Less' : 'View More'}</button>
+  </div>
+  
+  <div className="blog-post">
+    <h2>Resilience in the Face of Adversity</h2>
+    <p>
+      “Born a Crime” is not merely a tale of survival; it's a testament to the human spirit's ability...
+    </p>
+    {expandedPost === 2 && (
+      <>
+        <p>
+          Through Noah's eyes, we witness the strength of the human will as he navigates a system designed to break him. 
+          His story is a powerful reminder that resilience is not just about bouncing back from hardship; 
+          it's about finding joy, humor, and purpose within the chaos.
+        </p>
+        <p>
+          In a world where many face systemic barriers and discrimination, 
+          Noah's journey offers hope and inspiration, showing that even in the darkest times, 
+          there is room for growth, change, and ultimately, freedom.
+        </p>
+      </>
+    )}
+    <button onClick={() => togglePost(2)}>{expandedPost === 2 ? 'View Less' : 'View More'}</button>
+  </div>
+  
+  <div className="blog-post">
+    <h2>Love as a Catalyst for Change</h2>
+    <p>
+      At the heart of “Born a Crime” is the transformative power of love. Noah's relationship with his mother...
+    </p>
+    {expandedPost === 3 && (
+      <>
+        <p>
+          Patricia stands out as a beacon of hope and strength. Despite the odds stacked against them, 
+          they found solace and support in each other, embodying the idea that love can transcend boundaries and inspire change.
+        </p>
+        <p>
+          In a time when families are being torn apart by policies and ideologies that seek to divide us, 
+          Noah's portrayal of familial bonds offers a counter-narrative, 
+          reminding us of the importance of unity, compassion, and mutual understanding.
+        </p>
+      </>
+    )}
+    <button onClick={() => togglePost(3)}>{expandedPost === 3 ? 'View Less' : 'View More'}</button>
+  </div>
+</div>
 
       <div ref={teamRef} className='team-section'>
         <div className="div-container">
@@ -236,46 +274,45 @@ function Homepage() {
         </div>
       </div>
 
+      </div>
+
       <div ref={videosRef} className='footer-section'>
-        <h1 className={activeSection === 'footer' ? 'active' : ''}></h1>
-      </div>
-
-      <div className='container'>
-      <div className='color'>
-  <div>
-  <h1 className='follow'>Follow Us On</h1>
-
-   <div className="images">
-          <p><FaFacebook size='1.9rem' /></p>
-          <p><RiInstagramFill size='1.9rem' /></p>
-          <p><FaXTwitter size='1.9rem' /></p>
-        
-          </div>
-       
-      </div>
-      <div className='subscribe'>
-      <h1>Contact us</h1>
-    
-      </div>
-    
-      <div className='bottomfooter'>
-          <div id="whatsapp">
-          <p><FaSquareWhatsapp size='2.5rem' /></p>
-          <p>0725680764</p>
-          </div>
-          <div id="calling">
-              <p><IoCall size='2.5rem' /></p>
-          <p>+254769071112</p>
-          </div>
-          <div id="email">
-              <p><TfiEmail size='2.5rem' /></p>
-          <p>saviors@gmail.com</p>
-          </div>
-      </div>
-      </div>
-      </div>
+    <h1 className={activeSection === 'footer' ? 'active' : ''}>Stay Connected</h1> {/* Call to action */}
 
     </div>
+    
+    <div className='container'>
+        <div className='color'>
+            <h1 className='follow'>Follow Us On</h1>
+            <div className="images">
+                <p><FaFacebook size='1.9rem' /></p>
+                <p><RiInstagramFill size='1.9rem' /></p>
+                <p><FaXTwitter size='1.9rem' /></p>
+            </div>
+        </div>
+
+        <div className='subscribe'>
+            <h1>Contact Us</h1>
+        </div>
+
+        <div className='bottomfooter'>
+            <div id="whatsapp">
+                <p><FaSquareWhatsapp size='2.5rem' /></p>
+                <p>0725680764</p>
+            </div>
+            <div id="calling">
+                <p><IoCall size='2.5rem' /></p>
+                <p>+254769071112</p>
+            </div>
+            <div id="email">
+                <p><TfiEmail size='2.5rem' /></p>
+                <p>kuwala@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
   );
 }
 

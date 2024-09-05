@@ -4,9 +4,17 @@
     padding: 0;
 }
 
+span{
+    font-size: 20px;
+    color: #0c0615;
+    
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: rgb(245, 228, 196);
+    color: #333; 
 }
 
 .whole {
@@ -17,14 +25,12 @@ body {
 .navbar {
     display: flex;
     gap: 40px;
-    padding: 20px 150px;
-    justify-content: space-between;
+    padding: 20px 50px; 
     align-items: center;
     font-size: 20px;
-    margin-left: 7%;
-    position: relative; 
+    position: relative;
     z-index: 1000;
-    background-color: white; /* Add a background for visibility */
+    background-color: white; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,13 +49,13 @@ body {
     cursor: pointer; 
     color: #0c0615;
     font-size: larger;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; 
     padding: 10px;
 }
 
 .navbar-content li:hover {
     color: rgb(126, 55, 7); 
-    transform: scale(1.1);
+    transform: translateY(-2px); 
 }
 
 .landing-page {
@@ -57,7 +63,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     text-align: center;
     color: white;
 }
@@ -77,45 +83,52 @@ body {
 }
 
 .landing-page h2 {
-    z-index: 2; /* Ensure the text appears above the background */
+    z-index: 2; 
+    font-size: 36px; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); 
 }
 
 button {
     background-color: rgb(148, 54, 4); 
     color: white; 
-    width: 200px; 
+    width: 220px; 
     height: 50px; 
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
     font-size: 20px; 
-    margin-top: 15px; /* Add margin for separation */
-    transition: background-color 0.3s;
+    margin-top: 15px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 button:hover {
     background-color: rgb(68, 30, 1); 
+    transform: scale(1.05); 
 }
 
 #blog {
     display: flex;
-    flex-direction: column; /* Stack blog posts */
-    gap: 20px; /* Adds space between the blog posts */
+    flex-direction: column; 
+    gap: 20px; 
     font-size: 20px;
     padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 h1 {
     text-align: center;
+    font-size: 2.5rem; 
 }
 
 h2 {
-    color: rgb(68, 30, 1); 
+    color: rgb(68, 30, 1);
+    font-size: 1.8rem; 
 }
 
 .Uppercards, .bottomcards {
     display: flex;
-    flex-direction: column; /* Stack cards in two columns */
+    flex-direction: column; 
     align-items: center;
     padding: 20px;
 }
@@ -124,32 +137,42 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between items */
+    gap: 20px; 
     padding: 20px;
 }
 
 .cardsText {
-    background-color: white; /* Make card backgrounds white */
+    background-color: white; 
     margin: 10px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s; /* Transition for hover effect */
+    transition: box-shadow 0.3s, transform 0.3s; 
 }
 
 .cardsText:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); 
+}
+
+.cardsText img {
+    width: 100%; 
+    max-width: 300px; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
 }
 
 .cardsText h1 {
     font-size: 18px;
-    margin-bottom: 10px; /* Space below the title */
+    margin-bottom: 10px; 
 }
 
 .cardsText h2 {
     font-size: 16px;
-    color: #666; /* Slightly muted color for titles */
+    color: #666;
 }
 
 .interactiveBox {
@@ -161,6 +184,11 @@ h2 {
     text-align: center;
     margin: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s; 
+}
+
+.interactiveBox:hover {
+    background-color: #e0e0e0; 
 }
 
 .box-text {
@@ -182,38 +210,178 @@ h2 {
     padding: 20px;
     background-color: rgb(68, 30, 1); 
     color: white;
-    text-align: center; /* Center text in footer */
+    text-align: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content */
+    align-items: center;
 }
 
 .color {
     display: flex;
-    justify-content: space-between; /* Space out sections */
+    justify-content: space-around; 
     padding: 20px;
     width: 100%;
-    max-width: 1200px; /* Max width for improved layout */
+    max-width: 1200px; 
 }
 
 .images p {
-    margin: 0 10px; /* Space between icons */
+    margin: 0 15px;
 }
 
 #whatsapp, #calling, #email {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Space between contact items */
+    margin-top: 10px; 
 }
 
 #whatsapp p, #calling p, #email p {
-    margin-left: 10px; /* Space between icon and text */
+    margin-left: 10px; 
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.border-bottom {
+    border-bottom: 2px solid #ccc; 
+    padding: 20px 0; 
 }
 
 
+.blog-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.blog-post {
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0; 
+    padding: 20px; 
+    transition: transform 0.3s; 
+}
+
+.blog-post:hover {
+    transform: scale(1.02); 
+}
+
+.blog-post h2 {
+    color: rgb(68, 30, 1); 
+    font-size: 1.8rem; 
+    margin-bottom: 10px; 
+
+}
+
+.blog-post p {
+    font-size: 1rem; 
+    color: #555; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+
+button {
+    margin-top: 15px; 
+    width: 100%; 
+    padding: 10px; 
+    background-color: rgb(148, 54, 4); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: rgb(68, 30, 1); 
+    transform: scale(1.05); 
+}
+
+.sections{
+    background-color: rgb(245, 228, 196);
+}
+
+.footer-section {
+    background-color: rgb(68, 30, 1); /* Dark brown background */
+    color: white; /* White text for contrast */
+    padding: 40px 20px;  /* Padding for top, bottom and sides */
+    text-align: center; /* Center text */
+}
+
+.footer-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stacked layout */
+    align-items: center; /* Center align children */
+}
+
+.color {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align children */
+    margin-bottom: 30px; /* Margin for spacing */
+}
+
+.follow {
+    font-size: 1.5rem; /* Adjusted font size for follow us text */
+    margin-bottom: 15px; /* Space below the follow us heading */
+}
+
+.images {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.images p {
+    cursor: pointer; /* Pointer on hover */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.images p:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.subscribe {
+    margin-top: 20px; /* Space above contact us text */
+}
+
+.bottomfooter {
+    display: flex;
+    justify-content: space-around; /* Distribute evenly across the line */
+    padding: 20px 0; /* Padding for top and bottom */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light border on top */
+}
+
+.bottomfooter div {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    color: rgb(192, 136, 62); /* White text */
+    transition: transform 0.3s; /* Transition effect for hover */
+}
+
+.bottomfooter div:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.bottomfooter p {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.bottomfooter svg {
+    color: rgb(29, 4, 4); /* Color for footer icons if using SVGs */
+}
 
 
 
