@@ -79,7 +79,7 @@ function Homepage() {
   }, []);
 
   const togglePost = (postIndex) => {
-    setExpandedPost(expandedPost === postIndex ? null : postIndex); // Toggle post expansion
+    setExpandedPost(expandedPost === postIndex ? null : postIndex); 
   };
 
   return (
@@ -106,8 +106,8 @@ function Homepage() {
 
         <div ref={homeRef} className='landing-page'>
           <div className='content'>
-            <h2>The Laughter Rescue</h2>
-            <span>Dive into the wild world where humor turns struggles into strength! Each episode is packed with hilarious stories and uplifting insights, proving that laughter is really the best medicine. Join us for a fun ride of comedy and inspiration—let’s laugh through life’s twists and turns together!</span>
+            <h2 className='text'>The Laughter Rescue</h2>
+            <span >Dive into the wild world where humor turns struggles into strength! Each episode is packed with hilarious stories and uplifting insights, proving that laughter is really the best medicine. Join us for a fun ride of comedy and inspiration—let’s laugh through life’s twists and turns together!</span>
           </div>
     
       
@@ -151,11 +151,14 @@ function Homepage() {
 <div id='blog' className="blog-container">
   <div className="blog-post">
     <h2>A Dive into Born A Crime</h2>
-    <p>
+    <p className='trevpic'>
       In the realm of literature, books often serve as mirrors reflecting society's complexities. 
       One such book that has captivated readers worldwide is “Born a Crime,” penned by Trevor Noah. 
       This memoir offers an intimate glimpse into the life of one of the world's most beloved comedians, 
       but beyond the laughter lies a profound exploration of identity, resilience, and the enduring power of love...
+
+      <img src='/images/trevor.jpg' alt='Trevor Noah;s book' className='pic'/>
+
     </p>
     {expandedPost === 0 && (
       <>
@@ -163,6 +166,12 @@ function Homepage() {
           As we navigate through a world grappling with social, political, and economic upheavals, 
           “Born a Crime” emerges as a beacon of understanding and empathy. Noah's experiences highlight the importance 
           of personal narrative in a global context, exploring the paths less traveled and the stories too often overlooked.
+
+          The narrative also emphasizes the importance of community and relationships in building resilience. From friends who shared similar 
+          struggles to mentors who guided him along the way, Trevor's story highlights the network of support that can emerge even in challenging circumstances.
+           The concept of Ubuntu, an African philosophy emphasizing interconnectedness and humanity, serves as a backdrop to many of his reflections.
+            It underscores the idea that our shared experiences can foster solidarity and strength.
+          
         </p>
       </>
     )}
@@ -171,18 +180,32 @@ function Homepage() {
   
   <div className="blog-post">
     <h2>Navigating the Complexities of Identity</h2>
-    <p>
+    <p className='trevpic'>
+    <img src='/images/identity.jpg' alt='Trevor Noah;s book' className='pic'/>
+
       Trevor Noah's journey is not just about his rise to fame; it's a narrative woven with threads of racial identity...
-    </p>
-    {expandedPost === 1 && (
-      <>
-        <p>
-          Born to a white Swiss father and a black Xhosa mother during South Africa's apartheid era, 
+      Born to a white Swiss father and a black Xhosa mother during South Africa's apartheid era, 
           Noah's experiences highlight the intricate dance between identity and societal norms. 
           His story serves as a reminder that identity is not a monolith but a tapestry of experiences, histories, 
           and cultures that shape who we are.
+
+    </p>
+    {expandedPost === 1 && (
+      <>
+        <p >
+         
+          
         </p>
         <p>
+
+        His parents' relationship broke the law, creating a life for Trevor that was fraught with complications and 
+        contradictions. For instance, he often found himself caught between worlds, navigating the expectations and struggles
+        of both the black and white communities. This state of actually taught him early on that identity is multifaceted and cannot be easily 
+        categorized. His experiences highlight how societal norms can impact self-perception and community belonging, particularly for those who do not fit neatly
+         into prescribed categories.
+
+<br></br>
+<br></br>
           In today's increasingly globalized world, where hybrid identities are becoming the norm, 
           Noah's exploration of his own identity resonates deeply, challenging us to reconsider our preconceived notions 
           of race and belonging.
@@ -194,8 +217,11 @@ function Homepage() {
   
   <div className="blog-post">
     <h2>Resilience in the Face of Adversity</h2>
-    <p>
+    <p className='trevpic'>
       “Born a Crime” is not merely a tale of survival; it's a testament to the human spirit's ability...
+      The narrative also emphasizes the importance of community and relationships in building resilience. From friends who shared similar struggles to mentors who guided him along the way, Trevor's story highlights the network of support that can emerge even in challenging circumstances.
+      <img src='/images/break.jpg' alt='love' className='pic'/>
+
     </p>
     {expandedPost === 2 && (
       <>
@@ -216,14 +242,19 @@ function Homepage() {
   
   <div className="blog-post">
     <h2>Love as a Catalyst for Change</h2>
-    <p>
+    <p  className='trevpic'>
       At the heart of “Born a Crime” is the transformative power of love. Noah's relationship with his mother...
+      Through their shared experiences, their bond became a refuge—a source of laughter and joy amidst the chaos of their reality. Trevor affectionately recalls moments of shared mischief, creative adventures, and profound conversations,
+      <img src='/images/love.jpg' alt='love' className='pic'/>
+
     </p>
     {expandedPost === 3 && (
       <>
         <p>
           Patricia stands out as a beacon of hope and strength. Despite the odds stacked against them, 
           they found solace and support in each other, embodying the idea that love can transcend boundaries and inspire change.
+          
+
         </p>
         <p>
           In a time when families are being torn apart by policies and ideologies that seek to divide us, 

@@ -24,6 +24,21 @@ span{
 
 }
 
+.text{
+   font-weight: 900;
+}
+
+.trevpic{
+    display: flex;
+    gap: 20px;
+}
+
+.pic{
+    width: 230px;
+    padding-left: 30px;
+    margin-right: 20px;
+}
+
 .loom{
     width: 550px;
     height: 420px;
