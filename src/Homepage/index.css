@@ -10,6 +10,25 @@ span{
     
 }
 
+.lvideo{
+    gap: 300px;
+    display: flex;
+   justify-content: center;
+}
+
+.lvideo2{
+    gap: 300px;
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+
+}
+
+.loom{
+    width: 550px;
+    height: 420px;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;

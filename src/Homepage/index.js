@@ -27,6 +27,8 @@ const Podcast = () => {
                ))}
            </div>
        </div>
+
+       
    );
 };
 
@@ -107,6 +109,8 @@ function Homepage() {
             <h2>The Laughter Rescue</h2>
             <span>Dive into the wild world where humor turns struggles into strength! Each episode is packed with hilarious stories and uplifting insights, proving that laughter is really the best medicine. Join us for a fun ride of comedy and inspiration—let’s laugh through life’s twists and turns together!</span>
           </div>
+    
+      
         </div>
       </div>
 
@@ -130,7 +134,20 @@ function Homepage() {
         <h1 className={activeSection === 'videos' ? 'active' : ''}>Videos</h1>
       </div>
 
-      <h1>Blog</h1>
+     
+
+      <div className='lvideo'>
+       <iframe src="https://www.loom.com/embed/3cb31c5248c44b489311db78d55c1eb9?sid=345f5eaa-7767-4471-8f27-f402fe5d1c5b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen className='loom'></iframe>
+       <iframe src="https://www.loom.com/embed/3cb31c5248c44b489311db78d55c1eb9?sid=345f5eaa-7767-4471-8f27-f402fe5d1c5b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen className='loom'></iframe>
+       </div>  
+
+       <div className='lvideo2'>
+       <iframe src="https://www.loom.com/embed/3cb31c5248c44b489311db78d55c1eb9?sid=345f5eaa-7767-4471-8f27-f402fe5d1c5b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen className='loom'></iframe>
+       <iframe src="https://www.loom.com/embed/3cb31c5248c44b489311db78d55c1eb9?sid=345f5eaa-7767-4471-8f27-f402fe5d1c5b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen className='loom'></iframe>
+       </div>
+
+  
+     <h1>Blog</h1>
 <div id='blog' className="blog-container">
   <div className="blog-post">
     <h2>A Dive into Born A Crime</h2>
