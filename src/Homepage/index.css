@@ -5,8 +5,8 @@
 }
 
 span{
-    font-size: 20px;
-    color: #0c0615;
+    font-size: 25px;
+    color: black;
     
 }
 
@@ -25,24 +25,23 @@ body {
 .navbar {
     display: flex;
     gap: 40px;
-    padding: 20px 50px; 
-    align-items: center;
     font-size: 20px;
     position: relative;
     z-index: 1000;
-    background-color: white; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
     width: 70px;
     height: 60px;
+    margin-left: 100px;
 }
 
 .navbar-content {
     display: flex;
     list-style-type: none;
     gap: 7rem;
+    margin-left: 800px;
 }
 
 .navbar-content li {
@@ -124,6 +123,7 @@ h1 {
 h2 {
     color: rgb(68, 30, 1);
     font-size: 1.8rem; 
+    
 }
 
 .Uppercards, .bottomcards {
@@ -310,78 +310,84 @@ button:hover {
 }
 
 .footer-section {
-    background-color: rgb(68, 30, 1); /* Dark brown background */
-    color: white; /* White text for contrast */
-    padding: 40px 20px;  /* Padding for top, bottom and sides */
-    text-align: center; /* Center text */
+    background-color: rgb(68, 30, 1); 
+    color: white; 
+    padding: 40px 20px;  
+    text-align: center; 
 }
 
 .footer-section h1 {
     font-size: 2rem;
-    margin-bottom: 20px; /* Space below the heading */
+    margin-bottom: 20px; 
+
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* Stacked layout */
-    align-items: center; /* Center align children */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .color {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align children */
-    margin-bottom: 30px; /* Margin for spacing */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 30px; 
 }
 
 .follow {
-    font-size: 1.5rem; /* Adjusted font size for follow us text */
-    margin-bottom: 15px; /* Space below the follow us heading */
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
 }
 
 .images {
     display: flex;
-    gap: 20px; /* Space between icons */
+    gap: 20px; 
 }
 
 .images p {
-    cursor: pointer; /* Pointer on hover */
-    transition: transform 0.3s; /* Animation for hover effect */
+    cursor: pointer; 
+    transition: transform 0.3s; 
+
 }
 
 .images p:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+    transform: scale(1.1); 
+    
 }
 
 .subscribe {
-    margin-top: 20px; /* Space above contact us text */
+    margin-top: 20px; 
 }
 
 .bottomfooter {
     display: flex;
-    justify-content: space-around; /* Distribute evenly across the line */
-    padding: 20px 0; /* Padding for top and bottom */
-    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light border on top */
+    justify-content: space-around; 
+    padding: 20px 0; 
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
 }
 
 .bottomfooter div {
     display: flex;
-    align-items: center; /* Center items vertically */
-    color: rgb(192, 136, 62); /* White text */
-    transition: transform 0.3s; /* Transition effect for hover */
+    align-items: center; 
+    color: rgb(192, 136, 62); 
+    transition: transform 0.3s; 
 }
 
 .bottomfooter div:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
+    transform: scale(1.05); 
+
 }
 
 .bottomfooter p {
-    margin-left: 10px; /* Space between icon and text */
+    margin-left: 10px; 
 }
 
 .bottomfooter svg {
-    color: rgb(29, 4, 4); /* Color for footer icons if using SVGs */
+    color: rgb(29, 4, 4); 
 }
+
+
 
 
 
