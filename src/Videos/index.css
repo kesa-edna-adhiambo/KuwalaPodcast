@@ -1,0 +1,29 @@
+.video-button {
+    background-color: #83a7e0;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 180px;
+   margin-left: 200px;
+
+
+    
+  }
+  
+  
+  .video-button:hover {
+    background-color: #75726f;
+  }
+
+  
+
+@media only screen and (min-width: px) and (max-width: px){
+
+}
